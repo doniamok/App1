@@ -5,99 +5,99 @@
     android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="#2688D3"
+    android:background="@color/blue_max"
     tools:context=".login">
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text1"
         style="@style/Widget.AppCompat.TextView.SpinnerItem"
         android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:background="#2688D3"
-        android:hint="BMI Analyzer"
+        android:background="@color/blue_max"
+        android:text="@string/text_root"
         android:scrollIndicators="top"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="34sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         android:paddingTop="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginBottom="15dp"
         android:background="@color/white"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/text2"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="50dp"
-            android:text="Welcome Back"
+            android:text="@string/text_second"
             android:textAlignment="center"
-            android:textColor="#2688D3"
+            android:textColor="@color/blue_max"
             android:textSize="30sp"
             android:textStyle="bold"
             />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/text3"
             android:layout_width="match_parent"
             android:layout_height="38dp"
-            android:text="If you already have an account,log in"
+            android:text="@string/text_third"
             android:textAlignment="center"
-            android:textColor="#706C6C"
+            android:textColor="@color/text_box"
             android:textSize="20dp"/>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="407dp"
+            android:layout_height="336dp"
+            android:gravity="center"
             android:orientation="vertical"
             android:paddingLeft="40dp"
-            android:paddingTop="80dp"
+            android:paddingTop="20dp"
             android:paddingRight="40dp">
 
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Username"
-                android:padding="18dp"
+                android:hint="@string/box1"
+                android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="30dp" />
+                android:textSize="25sp" />
 
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:hint="Password"
+                android:hint="@string/box2"
                 android:inputType="textPassword"
-                android:padding="18dp"
+                android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="30dp" />
+                android:textSize="25sp" />
 
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/login"
                 android:layout_width="312dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/login_button"
-                android:backgroundTint="#2688D3"
-                android:text="LOG IN"
+                android:text="@string/login_text"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -105,30 +105,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="84dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/text_hint"
                 android:layout_width="214dp"
                 android:layout_height="47dp"
                 android:layout_marginLeft="40dp"
                 android:gravity="center"
-                android:text="You Don't Have An Account ? "
+                android:text="@string/text_hint"
                 android:textColor="@color/black"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/sign_in"
                 style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:backgroundTint="@color/white"
                 android:gravity="clip_vertical"
-                android:onClick="button10"
-                android:text="Sign Up"
-                android:textColor="#2688D3"
-                android:textSize="15dp" />
+                android:onClick="sign_in"
+                android:text="@string/btn_sign"
+                android:textColor="@color/blue_max"
+                android:textSize="15sp" />
 
 
         </LinearLayout>

@@ -5,34 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#2688D3"
+    android:background="@color/blue_max"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="514dp"
-        android:layout_gravity="center"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="30dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/bmi" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="200dp"
+            android:layout_height="370dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/bmi"
+            android:layout_marginTop="100dp"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/next"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="250dp"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="bottom|right"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#2688D3"
-        android:onClick="button2"
-        android:text="Next"
+        android:layout_gravity="end|bottom"
+        android:backgroundTint="@color/blue_max"
+        android:onClick="next"
+        android:text="@string/button_name"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"/>
 </LinearLayout>

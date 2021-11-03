@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public void button2(View v){
+    public void next(View v){
         Intent x = new Intent(MainActivity.this, login.class) ;
         startActivity(x) ;
     }

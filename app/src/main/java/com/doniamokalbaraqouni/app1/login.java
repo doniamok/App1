@@ -14,7 +14,7 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void button10(View v) {
+    public void sign_in(View v) {
         Intent y = new Intent(login.this, registration.class);
         startActivity(y);
 
