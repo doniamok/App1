@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:orientation="vertical"
     android:background="@color/blue_max"
+    android:orientation="vertical"
     tools:context=".login">
 
 
@@ -15,24 +15,24 @@
         android:id="@+id/text1"
         style="@style/Widget.AppCompat.TextView.SpinnerItem"
         android:layout_width="match_parent"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@color/blue_max"
-        android:text="@string/text_root"
+        android:paddingTop="10dp"
         android:scrollIndicators="top"
+        android:text="@string/text_root"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:paddingTop="10dp"/>
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="7dp"
         android:background="@color/white"
         android:orientation="vertical">
 
@@ -45,22 +45,21 @@
             android:textAlignment="center"
             android:textColor="@color/blue_max"
             android:textSize="30sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/text3"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="77dp"
             android:text="@string/text_third"
             android:textAlignment="center"
             android:textColor="@color/text_box"
-            android:textSize="20dp"/>
-
+            android:textSize="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="336dp"
+            android:layout_height="284dp"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingLeft="40dp"
@@ -74,62 +73,59 @@
                 android:hint="@string/box1"
                 android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
 
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:drawableRight="@drawable/ic_not_visible_interface_symbol_of_an_eye_with_a_slash_on_it_icon_icons_com_57783"
                 android:hint="@string/box2"
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
 
 
             <Button
                 android:id="@+id/login"
-                android:layout_width="312dp"
+                android:layout_width="315dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/login_button"
+                android:layout_marginTop="50dp"
                 android:text="@string/login_text"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:background="@drawable/login_button"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_height="96dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/text_hint"
-                android:layout_width="214dp"
-                android:layout_height="47dp"
-                android:layout_marginLeft="40dp"
+                android:layout_width="170dp"
+                android:layout_height="54dp"
                 android:gravity="center"
                 android:text="@string/text_hint"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                android:textSize="12sp" />
 
-            <Button
+            <TextView
                 android:id="@+id/sign_in"
-                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_width="74dp"
+                android:layout_height="58dp"
                 android:backgroundTint="@color/white"
-                android:gravity="clip_vertical"
+                android:gravity="center"
                 android:onClick="sign_in"
                 android:text="@string/btn_sign"
                 android:textColor="@color/blue_max"
-                android:textSize="15sp" />
+                android:textSize="12sp" />
 
 
         </LinearLayout>
