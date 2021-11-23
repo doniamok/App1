@@ -69,7 +69,8 @@
                 android:hint="@string/hint_1"
                 android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/edit_style"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -79,7 +80,8 @@
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/edit_style"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -90,7 +92,8 @@
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/edit_style"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -100,7 +103,8 @@
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textColor="@color/cardview_light_background"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/edit_style"/>
 
             <Button
                 android:id="@+id/btn_create"
