@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".add_record">
+
+
+    <TextView
+        android:id="@+id/text_new_record"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/new_record"
+        android:textAlignment="center"
+        android:textColor="@color/blue_max"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="@string/text_weight"
+            android:textColor="@color/blue_max"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/increase"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/edit_text_style"
+            android:text="@string/text_decrease"
+            android:textAlignment="center"
+            android:textColor="@color/blue_max"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_weight"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style" />
+
+        <TextView
+            android:id="@+id/decrease"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style"
+            android:text="@string/text_increase"
+            android:textAlignment="center"
+            android:textColor="@color/blue_max"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/unit"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:text="@string/text_unit"
+            android:textAlignment="center"
+            android:textColor="@color/blue_max"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="@string/text_length"
+            android:textColor="@color/blue_max"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/edit_text_style"
+            android:text="@string/text_decrease"
+            android:textAlignment="center"
+            android:textColor="@color/blue_max"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_length"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style" />
+
+        <TextView
+            android:id="@+id/decrease_length"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style"
+            android:text="@string/text_increase"
+            android:textAlignment="center"
+            android:textColor="@color/blue_max"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/unit_length"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
+            android:text="@string/text_unit_length"
+            android:textAlignment="center"
+            android:textColor="@color/blue_max"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/blue_max"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="45dp"/>
+
+        <EditText
+            android:id="@+id/edit_data"
+            android:layout_width="155dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="92dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textColor="@color/blue_max"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="45dp"/>
+
+        <EditText
+            android:id="@+id/edit_time"
+            android:layout_width="153dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="92dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="time" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/text_btn_save"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@drawable/login_button"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

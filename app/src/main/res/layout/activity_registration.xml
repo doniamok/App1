@@ -9,29 +9,6 @@
     android:orientation="vertical"
     tools:context=".registration">
 
-    <TextView
-        android:id="@+id/text_create"
-        style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/blue_max"
-        android:paddingTop="10dp"
-        android:text="@string/text_root"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginBottom="7dp"
-        android:background="@color/white"
-        android:orientation="vertical">
-
         <TextView
             android:id="@+id/text_top"
             android:layout_width="match_parent"
@@ -117,7 +94,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="create"/>
         </LinearLayout>
 
         <LinearLayout
@@ -148,6 +126,5 @@
 
 
         </LinearLayout>
-    </LinearLayout>
 
 </LinearLayout>
