@@ -38,8 +38,8 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/increase"
+        <Button
+            android:id="@+id/decrease"
             android:layout_width="36dp"
             android:layout_height="40dp"
             android:layout_marginLeft="70dp"
@@ -56,8 +56,8 @@
             android:layout_height="40dp"
             android:background="@drawable/edit_text_style" />
 
-        <TextView
-            android:id="@+id/decrease"
+        <Button
+            android:id="@+id/increase"
             android:layout_width="36dp"
             android:layout_height="40dp"
             android:background="@drawable/edit_text_style"
@@ -95,7 +95,7 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/textView2"
             android:layout_width="36dp"
             android:layout_height="40dp"
@@ -113,8 +113,8 @@
             android:layout_height="40dp"
             android:background="@drawable/edit_text_style" />
 
-        <TextView
-            android:id="@+id/decrease_length"
+        <Button
+            android:id="@+id/increase_length"
             android:layout_width="36dp"
             android:layout_height="40dp"
             android:background="@drawable/edit_text_style"
@@ -188,7 +188,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/save"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"

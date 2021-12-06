@@ -1,0 +1,43 @@
+package com.doniamokalbaraqouni.app1.OOP;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.doniamokalbaraqouni.app1.R;
+
+import java.util.ArrayList;
+
+public class BMIRecordAdapter extends RecyclerView.Adapter<BMIRecordHolder> {
+    private User user;
+    private Context context;
+
+    public BMIRecordAdapter(User user, Context context){
+        this.user = user ;
+        this.context = context ;
+    }
+
+    @NonNull
+    @Override
+    public  BMIRecordHolder onCreateViewHolder(
+            @NonNull ViewGroup parent , int viewType){
+        View view = LayoutInflater.from(context).inflate(R.layout.element_bmi_record,parent,false) ;
+                return new BMIRecordHolder(view);
+    }
+
+    @Override
+    public  void onBindViewHolder(@NonNull BMIRecordHolder holder, int position) {
+        BMIRecord record = user.getRecords().get(position);
+        holder.setBMIRecord(record);
+    }
+
+    @Override
+    public int getItemCount(){
+        return user.getRecords().size() ;
+
+    }
+}

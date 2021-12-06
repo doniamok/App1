@@ -32,4 +32,26 @@
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="new_record">New Record</string>
+    <string name="add_food">Add Food Details</string>
+    <string name="text_calary">Calary</string>
+    <string name="unit_calary">cal/g</string>
+    <string name="upload">UpLoad Photo</string>
+    <string name="save">Save</string>
+    <string name="personal_inf">Hi,Mohammed</string>
+    <string name="current_status">Current Status</string>
+    <string name="current_hint">Normal(still Good)</string>
+    <string name="add_btn">Add Food</string>
+    <string name="add_record_btn">Add Record</string>
+    <string name="view">View Food</string>
+    <string name="btn_logout"><u><b>Logout</b></u></string>
+    <string name="underWeightDetails"> underWeight,So Bad</string>
+    <string name="Normal">Normal,Still Good</string>
+    <string name="Overweight">Overweight,Go Ahead</string>
+    <string name="Obesity">Obesity</string>
+    <string name="photo">photo</string>
+    <string-array name="weight">
+        <item>item1</item>
+        <item>item2</item>
+    </string-array>
+    <string name="category">Category</string>
 </resources>

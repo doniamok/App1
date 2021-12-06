@@ -45,9 +45,10 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_1"
                 android:padding="10dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:background="@drawable/edit_style"/>
+                android:background="@drawable/edit_style"
+                android:id="@+id/name"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -56,21 +57,26 @@
                 android:hint="@string/hint_2"
                 android:inputType="textEmailAddress"
                 android:padding="10dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:background="@drawable/edit_style"/>
-
+                android:background="@drawable/edit_style"
+                android:id="@+id/e_mail"/>
+     <com.google.android.material.textfield.TextInputLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:passwordToggleEnabled="true">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:drawableRight="@drawable/ic_not_visible_interface_symbol_of_an_eye_with_a_slash_on_it_icon_icons_com_57783"
                 android:hint="@string/box2"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:background="@drawable/edit_style"/>
+                android:background="@drawable/edit_style"
+                android:id="@+id/password2"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
             <EditText
                 android:layout_width="match_parent"
@@ -79,9 +85,10 @@
                 android:hint="@string/hint_4"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:background="@drawable/edit_style"/>
+                android:background="@drawable/edit_style"
+                android:id="@+id/re_password"/>
 
             <Button
                 android:id="@+id/btn_create"
@@ -95,7 +102,7 @@
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:onClick="create"/>
+                android:onClick="@create()"/>
         </LinearLayout>
 
         <LinearLayout

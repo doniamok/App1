@@ -29,7 +29,7 @@
             android:text="@string/text_third"
             android:textAlignment="center"
             android:textColor="@color/text_box"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,22 +46,28 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/box1"
                 android:padding="10dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:background="@drawable/edit_style"/>
+                android:background="@drawable/edit_style"
+                android:id="@+id/username"/>
 
-
+   <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    app:passwordToggleEnabled="true">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:drawableRight="@drawable/ic_not_visible_interface_symbol_of_an_eye_with_a_slash_on_it_icon_icons_com_57783"
                 android:hint="@string/box2"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                android:background="@drawable/edit_style"/>
+                android:background="@drawable/edit_style"
+                android:id="@+id/password"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
             <Button
@@ -74,7 +80,8 @@
                 android:textColor="@color/white"
                 android:background="@drawable/login_button"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="@moveLogin()"/>
         </LinearLayout>
 
         <LinearLayout
@@ -98,7 +105,7 @@
                 android:layout_height="58dp"
                 android:backgroundTint="@color/white"
                 android:gravity="center"
-                android:onClick="sign_in"
+                android:onClick="@sign_in()"
                 android:text="@string/btn_sign"
                 android:textColor="@color/blue_max"
                 android:textSize="12sp" />

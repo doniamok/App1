@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App1">
         <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".add_food_details"
+            android:exported="false" />
+        <activity
             android:name=".add_record"
             android:exported="false"
-            android:parentActivityName=".complete_information"/>
+            android:parentActivityName=".complete_information" />
         <activity
             android:name=".complete_information"
             android:exported="false" />

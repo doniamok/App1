@@ -46,7 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="50dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/radio_group">
 
             <RadioButton
                 android:layout_width="74dp"
@@ -55,7 +56,8 @@
                 android:text="@string/text_male"
                 android:textColor="@color/blue_max"
                 android:textSize="15dp"
-                android:buttonTint="@color/blue_max"/>
+                android:buttonTint="@color/blue_max"
+                android:id="@+id/male"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -64,7 +66,8 @@
                 android:text="@string/text_female"
                 android:textColor="@color/blue_max"
                 android:textSize="15dp"
-                android:buttonTint="@color/blue_max"/>
+                android:buttonTint="@color/blue_max"
+                android:id="@+id/female"/>
 
         </RadioGroup>
     </LinearLayout>
@@ -87,7 +90,7 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/increase"
             android:layout_width="36dp"
             android:layout_height="40dp"
@@ -105,7 +108,7 @@
             android:layout_height="40dp"
             android:background="@drawable/edit_text_style" />
 
-        <TextView
+        <Button
             android:id="@+id/decrease"
             android:layout_width="36dp"
             android:layout_height="40dp"
@@ -144,7 +147,7 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/textView2"
             android:layout_width="36dp"
             android:layout_height="40dp"
@@ -162,7 +165,7 @@
             android:layout_height="40dp"
             android:background="@drawable/edit_text_style" />
 
-        <TextView
+        <Button
             android:id="@+id/decrease_length"
             android:layout_width="36dp"
             android:layout_height="40dp"
@@ -211,7 +214,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/save_data"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -222,6 +225,6 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:onClick="save"/>
+        android:onClick="@save_data()"/>
 
     </LinearLayout>

@@ -31,7 +31,6 @@
         android:layout_gravity="end|bottom"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/blue_max"
         android:onClick="next"
         android:text="@string/button_name"
         android:textColor="@color/white"
