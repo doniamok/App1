@@ -27,7 +27,8 @@ public class BMIRecordHolder extends RecyclerView.ViewHolder {
     public  void  setBMIRecord(BMIRecord record){
         this.record = record ;
         date.setText(record.getDate()) ;
-        weight.setText(record.getWeight()+"KG") ;
+        weight.setText(record.getWeight()+"Kg") ;
+        length.setText(record.getLength()+"Cm");
         message.setText(record.getBmiMessage()) ;
     }
 }

@@ -3,49 +3,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/blue_max">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="210dp"
-        android:layout_height="96dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        />
-
-    <TextView
-        android:id="@+id/weight"
-        android:layout_width="201dp"
-        android:layout_height="96dp"
-        android:background="@color/white"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp" />
- </LinearLayout>
+    android:background="@color/blue_max"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        >
+
+       <TextView
+            android:id="@+id/date"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:layout_marginBottom="2dp"
+            />
 
         <TextView
-            android:id="@+id/message"
-            android:layout_width="210dp"
-            android:layout_height="96dp"
-            android:background="@color/white"
+            android:id="@+id/weight"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:paddingLeft="1dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:text="@string/Normal"/>
 
-    <TextView
-        android:id="@+id/length"
-        android:layout_width="201dp"
-        android:layout_height="96dp"
-        android:background="@color/white"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"/>
+        <TextView
+            android:id="@+id/length"
+            android:layout_width="151dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:textColor="@color/black" />
+
     </LinearLayout>
 </LinearLayout>

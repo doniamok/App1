@@ -25,7 +25,7 @@ public class home extends AppCompatActivity {
     TextView tv ;
     TextView cs ;
     RecyclerView rv ;
-    ArrayList<BMIRecord> records ;
+
     float bmi ;
     float intLength,intWeight ;
     String length;
@@ -63,17 +63,21 @@ public class home extends AppCompatActivity {
             cs.setText(R.string.Obesity) ;
         }
 
-
         tv = findViewById(R.id.personal_inf);
         tv.setText("Hi ," + getIntent().getExtras().getString("username"));
+
+        ArrayList<BMIRecord> records = new ArrayList<>() ;
+        records.add(new BMIRecord("1/12/2021", 70,161));
+        records.add(new BMIRecord("2/12/2021", 70, 161));
+        records.add(new BMIRecord("3/12/2021", 69, 161));
+        records.add(new BMIRecord("30/11/2021", 70, 161));
+
         rv = findViewById(R.id.rv_home);
-
-
-
+        BMIRecordAdapter adapter=new BMIRecordAdapter(records) ;
         RecyclerView.LayoutManager lm = new GridLayoutManager(getApplicationContext(), 2);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(lm);
-
+        rv.setAdapter(adapter);
 
     }
 

@@ -39,6 +39,7 @@
     <string name="save">Save</string>
     <string name="personal_inf">Hi,Mohammed</string>
     <string name="current_status">Current Status</string>
+    <string name="current_old">Old Status</string>
     <string name="current_hint">Normal(still Good)</string>
     <string name="add_btn">Add Food</string>
     <string name="add_record_btn">Add Record</string>

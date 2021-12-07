@@ -13,31 +13,32 @@ import com.doniamokalbaraqouni.app1.R;
 import java.util.ArrayList;
 
 public class BMIRecordAdapter extends RecyclerView.Adapter<BMIRecordHolder> {
-    private User user;
-    private Context context;
+    ArrayList<BMIRecord> records;
 
-    public BMIRecordAdapter(User user, Context context){
-        this.user = user ;
-        this.context = context ;
+
+    public BMIRecordAdapter(ArrayList<BMIRecord> records){
+        this.records = records ;
+
     }
 
     @NonNull
     @Override
     public  BMIRecordHolder onCreateViewHolder(
             @NonNull ViewGroup parent , int viewType){
-        View view = LayoutInflater.from(context).inflate(R.layout.element_bmi_record,parent,false) ;
-                return new BMIRecordHolder(view);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.element_bmi_record,null,false) ;
+        BMIRecordHolder recordHolder=new BMIRecordHolder(v);
+        return recordHolder ;
     }
 
     @Override
     public  void onBindViewHolder(@NonNull BMIRecordHolder holder, int position) {
-        BMIRecord record = user.getRecords().get(position);
+        BMIRecord record = records.get(position);
         holder.setBMIRecord(record);
     }
 
     @Override
     public int getItemCount(){
-        return user.getRecords().size() ;
+        return records.size() ;
 
     }
 }

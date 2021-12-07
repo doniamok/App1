@@ -25,6 +25,8 @@ public class BMIRecord {
     public int getWeight() {
         return weight;
     }
+    public void setLength(int length){this.length=length ;}
+    public int getLength(){return length ;}
     public String getBmiMessage(){
         return message ;
     }
