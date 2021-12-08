@@ -14,19 +14,21 @@ import java.util.ArrayList;
 
 public class BMIRecordAdapter extends RecyclerView.Adapter<BMIRecordHolder> {
     ArrayList<BMIRecord> records;
+    private Context context;
 
 
-    public BMIRecordAdapter(ArrayList<BMIRecord> records){
+
+    public BMIRecordAdapter(ArrayList<BMIRecord> records,Context context){
         this.records = records ;
-
+        this.context=context;
     }
 
     @NonNull
     @Override
     public  BMIRecordHolder onCreateViewHolder(
             @NonNull ViewGroup parent , int viewType){
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.element_bmi_record,null,false) ;
-        BMIRecordHolder recordHolder=new BMIRecordHolder(v);
+        View view = LayoutInflater.from(context).inflate(R.layout.element_bmi_record,parent,false) ;
+        BMIRecordHolder recordHolder=new BMIRecordHolder(view);
         return recordHolder ;
     }
 

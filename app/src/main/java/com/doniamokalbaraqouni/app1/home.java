@@ -3,6 +3,7 @@ package com.doniamokalbaraqouni.app1;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
@@ -23,18 +24,12 @@ import java.util.ArrayList;
 
 public class home extends AppCompatActivity {
     TextView tv ;
-    TextView cs ;
     RecyclerView rv ;
-
-    float bmi ;
-    float intLength,intWeight ;
-    String length;
-    String weight  ;
-
-
-
-
-
+    ArrayList<BMIRecord> records;
+    BMIRecordAdapter adapter;
+    Button add_food_btn ;
+    Button save_btn1;
+    Button view_home;
 
 
     @Override
@@ -43,50 +38,42 @@ public class home extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.toolbar_title_style);
         setContentView(R.layout.activity_home);
-        cs = findViewById(R.id.edit_current);
-        length=getIntent().getStringExtra("length2") ;
-        weight=getIntent().getStringExtra("weight2") ;
-
-        intLength=intLength/100 ;
-        bmi=intWeight/(intLength*intLength) ;
-
-        if(bmi<18.5){
-            cs.setText(R.string.underWeightDetails);
-        }
-        else if(bmi<=18.5 && bmi<25){
-            cs.setText(R.string.Normal) ;
-        }
-        else if(bmi<=25 && bmi<30){
-            cs.setText(R.string.Overweight) ;
-        }
-        else if(bmi>30){
-            cs.setText(R.string.Obesity) ;
-        }
 
         tv = findViewById(R.id.personal_inf);
         tv.setText("Hi ," + getIntent().getExtras().getString("username"));
 
-        ArrayList<BMIRecord> records = new ArrayList<>() ;
-        records.add(new BMIRecord("1/12/2021", 70,161));
-        records.add(new BMIRecord("2/12/2021", 70, 161));
-        records.add(new BMIRecord("3/12/2021", 69, 161));
-        records.add(new BMIRecord("30/11/2021", 70, 161));
+        add_food_btn = findViewById(R.id.add_food_btn);
+        save_btn1 = findViewById(R.id.save_btn1);
+        view_home = findViewById(R.id.view_home);
+        add_food_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                add();
+            }
+        });
+        save_btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            save_btn1();
+            }
+            }) ;
 
-        rv = findViewById(R.id.rv_home);
-        BMIRecordAdapter adapter=new BMIRecordAdapter(records) ;
-        RecyclerView.LayoutManager lm = new GridLayoutManager(getApplicationContext(), 2);
-        rv.setHasFixedSize(true);
-        rv.setLayoutManager(lm);
+        rv=findViewById(R.id.rv_home) ;
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        records = (new User()).getRecords();
+        adapter=new BMIRecordAdapter(records,this) ;
         rv.setAdapter(adapter);
+
+
 
     }
 
-    public void add(View v) {
+    public void add() {
         Intent a = new Intent(home.this, add_record.class);
         startActivity(a);
     }
 
-    public void save_btn1(View v) {
+    public void save_btn1() {
         Intent t = new Intent(home.this, add_food_details.class);
         startActivity(t);
     }
