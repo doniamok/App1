@@ -35,37 +35,41 @@
             android:layout_marginLeft="40dp"
             android:text="@string/text_weight"
             android:textColor="@color/blue_max"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/decrease"
+            android:id="@+id/decrease_weight"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="70dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_decrease"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
 
         <EditText
             android:id="@+id/edit_weight"
             android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_text_style" />
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_style"
+            android:textAlignment="center"
+            android:inputType="number"/>
 
         <Button
-            android:id="@+id/increase"
+            android:id="@+id/increase_weight"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_increase"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
 
         <TextView
             android:id="@+id/unit"
@@ -74,7 +78,7 @@
             android:text="@string/text_unit"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -92,37 +96,41 @@
             android:layout_marginLeft="45dp"
             android:text="@string/text_length"
             android:textColor="@color/blue_max"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/textView2"
+            android:id="@+id/decrease_length"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="70dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_decrease"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
 
         <EditText
             android:id="@+id/edit_length"
             android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_text_style" />
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_style"
+            android:textAlignment="center"
+            android:inputType="number"/>
 
         <Button
             android:id="@+id/increase_length"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_increase"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
 
         <TextView
             android:id="@+id/unit_length"
@@ -131,7 +139,7 @@
             android:text="@string/text_unit_length"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -148,14 +156,14 @@
             android:layout_height="wrap_content"
             android:text="@string/date"
             android:textColor="@color/blue_max"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginLeft="45dp"/>
 
         <EditText
             android:id="@+id/edit_data"
             android:layout_width="155dp"
-            android:layout_height="36dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="92dp"
             android:background="@drawable/edit_text_style"
             android:inputType="date" />
@@ -174,15 +182,15 @@
             android:layout_height="wrap_content"
             android:text="@string/time"
             android:textColor="@color/blue_max"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginLeft="45dp"/>
 
         <EditText
             android:id="@+id/edit_time"
             android:layout_width="153dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="92dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="90dp"
             android:background="@drawable/edit_text_style"
             android:inputType="time" />
     </LinearLayout>

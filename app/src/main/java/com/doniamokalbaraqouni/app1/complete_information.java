@@ -8,23 +8,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class complete_information extends AppCompatActivity {
     RadioGroup radioGroup ;
     String gender ;
-    Button increase,decrease ;
+    Button increase1 ;
+    Button decrease1 ;
+    Button increase2 ;
+    Button decrease2 ;
     Button save_data ;
     EditText weight ;
     EditText length ;
+    int count_1=0 ;
+    int count_2=0 ;
 
-    int intWeight=120;
-    int intLength=160;
-    String weight2="120";
-    String length2="160";
 
 
 
@@ -37,10 +36,13 @@ public class complete_information extends AppCompatActivity {
         setContentView(R.layout.activity_copmlete_information);
         radioGroup=findViewById(R.id.radio_group) ;
         save_data=findViewById(R.id.save_data) ;
-        increase=findViewById(R.id.increase) ;
-        decrease=findViewById(R.id.decrease) ;
+        increase1=findViewById(R.id.increase1) ;
+        decrease1=findViewById(R.id.decrease1) ;
+        increase2=findViewById(R.id.increase2) ;
+        decrease2=findViewById(R.id.decrease2) ;
         weight=findViewById(R.id.edit_weight);
         length=findViewById(R.id.edit_length) ;
+
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -56,40 +58,38 @@ public class complete_information extends AppCompatActivity {
             }
         });
 
-        increase.setOnClickListener(new View.OnClickListener() {
+        increase1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intWeight=intWeight+1;
-                weight2 =String.valueOf(intWeight);
-                increase.setText(weight2);
+                   count_1=count_1+1;
+                    weight.setText(String.valueOf(count_1));
+
             }
         });
 
 
-        increase.setOnClickListener(new View.OnClickListener() {
+        increase2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intLength=intLength+1;
-                length2=String.valueOf(intLength);
-                increase.setText(length2);
+                count_2=count_2+1;
+                length.setText(String.valueOf(count_2));
             }
         });
 
-        decrease.setOnClickListener(new View.OnClickListener() {
+        decrease1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intLength=intLength-1;
-                length2=String.valueOf(intLength);
-                decrease.setText(length2);
+                count_1=count_1-1;
+                weight.setText(String.valueOf(count_1));
+
             }
         });
 
-        decrease.setOnClickListener(new View.OnClickListener() {
+        decrease2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intWeight=intWeight+1;
-                weight2 =String.valueOf(intWeight);
-                decrease.setText(weight2);
+                count_2=count_2-1;
+                length.setText(String.valueOf(count_2));
             }
         });
 
@@ -105,25 +105,7 @@ public class complete_information extends AppCompatActivity {
 
 
     public void save_data() {
-
-        if(gender.equals("0"))
-        {
-            Toast.makeText(getApplicationContext(),"Select Your Gender First",Toast.LENGTH_SHORT).show();
-        }
-
-        else if(intLength==0 || intLength<0)
-        {
-            Toast.makeText(getApplicationContext(),"Select Your Length First",Toast.LENGTH_SHORT).show();
-        }
-
-        else if(intWeight==0|| intWeight<0)
-        {
-            Toast.makeText(getApplicationContext(),"Weight Is Incorrect",Toast.LENGTH_SHORT).show();
-        }
-        else {
             Intent w = new Intent(complete_information.this, home.class);
-            w.putExtra("weight",weight2) ;
-            w.putExtra("length",length2) ;
             startActivity(w);
 
         }
@@ -133,7 +115,6 @@ public class complete_information extends AppCompatActivity {
 
 
 
-    }
 
 
 

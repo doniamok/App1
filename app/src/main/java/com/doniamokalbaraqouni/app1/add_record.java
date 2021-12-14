@@ -10,14 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class add_record extends AppCompatActivity {
-    Button increase,decrease ;
+    Button decrease_weight ;
+    Button increase_weight ;
+    Button decrease_length ;
+    Button increase_length;
     Button save ;
     EditText weight ;
     EditText length ;
-    int intWeight=80;
-    int intLength=160;
-    String weight2="80";
-    String length2="160";
+    int count_1 ;
+    int count_2 ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,49 +29,50 @@ public class add_record extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar() ;
         actionBar.setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_add_record);
+
         save=findViewById(R.id.save) ;
-        increase=findViewById(R.id.increase) ;
-        decrease=findViewById(R.id.decrease) ;
+        increase_weight=findViewById(R.id.increase_weight) ;
+        increase_length=findViewById(R.id.increase_length) ;
+        decrease_length=findViewById(R.id.decrease_length) ;
+        decrease_weight=findViewById(R.id.decrease_weight) ;
         weight=findViewById(R.id.edit_weight);
         length=findViewById(R.id.edit_length) ;
 
 
-     increase.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            intWeight=intWeight+1;
-            weight2 =String.valueOf(intWeight);
-            increase.setText(weight2);
-        }
-    });
+        increase_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count_1=count_1+1;
+                weight.setText(String.valueOf(count_1));
+
+            }
+        });
 
 
-        increase.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            intLength=intLength+1;
-            length2=String.valueOf(intLength);
-            increase.setText(length2);
-        }
-    });
+        increase_length.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count_2=count_2+1;
+                length.setText(String.valueOf(count_2));
+            }
+        });
 
-        decrease.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            intLength=intLength-1;
-            length2=String.valueOf(intLength);
-            decrease.setText(length2);
-        }
-    });
+        decrease_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count_1=count_1-1;
+                weight.setText(String.valueOf(count_1));
 
-        decrease.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            intWeight=intWeight+1;
-            weight2 =String.valueOf(intWeight);
-            decrease.setText(weight2);
-        }
-    });
+            }
+        });
+
+        decrease_length.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count_2=count_2-1;
+                length.setText(String.valueOf(count_2));
+            }
+        });
 
 
         save.setOnClickListener(new View.OnClickListener() {

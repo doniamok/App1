@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".food_list">
+
+    <TextView
+        android:id="@+id/add_food_list"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/food_list"
+        android:textAlignment="center"
+        android:textColor="@color/blue_max"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/food_list"
+        android:layout_width="match_parent"
+        android:layout_height="613dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

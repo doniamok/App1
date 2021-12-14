@@ -55,4 +55,5 @@
         <item>item2</item>
     </string-array>
     <string name="category">Category</string>
+    <string name="food_list">Food List</string>
 </resources>

@@ -14,6 +14,7 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
    Timer timer ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
        ActionBar actionBar= getSupportActionBar() ;
        actionBar.hide();
         setContentView(R.layout.activity_main);
+
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -30,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        },1000);
 
     }
+
     public void next(View v){
         Intent x = new Intent(MainActivity.this, login.class) ;
         startActivity(x) ;

@@ -3,7 +3,7 @@ package com.doniamokalbaraqouni.app1;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager ;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
@@ -36,7 +36,9 @@ public class home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.toolbar_title_style);
+        getSupportActionBar().setCustomView(R.layout.toolbar_title_style) ;
+        ActionBar actionBar=getSupportActionBar() ;
+        actionBar.setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_home);
 
         tv = findViewById(R.id.personal_inf);
@@ -45,6 +47,7 @@ public class home extends AppCompatActivity {
         add_food_btn = findViewById(R.id.add_food_btn);
         save_btn1 = findViewById(R.id.save_btn1);
         view_home = findViewById(R.id.view_home);
+        
         add_food_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +63,7 @@ public class home extends AppCompatActivity {
 
         rv=findViewById(R.id.rv_home) ;
         rv.setLayoutManager(new LinearLayoutManager(this));
-        records = (new User()).getRecords();
+        records = new User().getRecords();
         adapter=new BMIRecordAdapter(records,this) ;
         rv.setAdapter(adapter);
 
@@ -68,12 +71,12 @@ public class home extends AppCompatActivity {
 
     }
 
-    public void add() {
+    public void save_btn1() {
         Intent a = new Intent(home.this, add_record.class);
         startActivity(a);
     }
 
-    public void save_btn1() {
+    public void add() {
         Intent t = new Intent(home.this, add_food_details.class);
         startActivity(t);
     }

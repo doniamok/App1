@@ -49,7 +49,8 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/edit_style"
-                android:id="@+id/username"/>
+                android:id="@+id/username"
+                android:inputType="text"/>
 
    <com.google.android.material.textfield.TextInputLayout
     android:layout_width="match_parent"
@@ -81,7 +82,7 @@
                 android:background="@drawable/login_button"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:onClick="@moveLogin()"/>
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -101,11 +102,10 @@
 
             <TextView
                 android:id="@+id/sign_in"
-                android:layout_width="74dp"
-                android:layout_height="58dp"
+                android:layout_width="66dp"
+                android:layout_height="54dp"
                 android:backgroundTint="@color/white"
                 android:gravity="center"
-                android:onClick="@sign_in()"
                 android:text="@string/btn_sign"
                 android:textColor="@color/blue_max"
                 android:textSize="12sp" />

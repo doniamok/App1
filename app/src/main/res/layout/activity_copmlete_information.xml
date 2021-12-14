@@ -77,7 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:orientation="horizontal"
-        android:layout_gravity="center">
+       >
 
 
         <TextView
@@ -91,38 +91,42 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/increase"
+            android:id="@+id/decrease1"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="70dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_decrease"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
 
         <EditText
             android:id="@+id/edit_weight"
             android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_text_style" />
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="number"
+            android:textAlignment="center"/>
 
         <Button
-            android:id="@+id/decrease"
+            android:id="@+id/increase1"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_increase"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
 
         <TextView
             android:id="@+id/unit"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:text="@string/text_unit"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
@@ -134,7 +138,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:orientation="horizontal"
-        android:layout_gravity="center">
+        >
 
 
         <TextView
@@ -148,33 +152,36 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/textView2"
+            android:id="@+id/decrease2"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="74dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_decrease"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
 
         <EditText
             android:id="@+id/edit_length"
             android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:background="@drawable/edit_text_style" />
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_style"
+            android:textAlignment="center"/>
 
         <Button
-            android:id="@+id/decrease_length"
+            android:id="@+id/increase2"
             android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/edit_text_style"
             android:text="@string/text_increase"
             android:textAlignment="center"
             android:textColor="@color/blue_max"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="3dp" />
 
         <TextView
             android:id="@+id/unit_length"
@@ -207,7 +214,7 @@
         <EditText
             android:id="@+id/edit_data"
             android:layout_width="188dp"
-            android:layout_height="36dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="27dp"
             android:background="@drawable/edit_text_style"
             android:inputType="date" />
@@ -225,6 +232,6 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:onClick="@save_data()"/>
+       />
 
     </LinearLayout>

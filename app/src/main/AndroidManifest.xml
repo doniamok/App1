@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App1">
         <activity
+            android:name=".food_list"
+            android:exported="false" />
+        <activity
             android:name=".home"
             android:exported="false" />
         <activity
