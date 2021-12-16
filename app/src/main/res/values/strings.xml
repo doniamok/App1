@@ -56,4 +56,5 @@
     </string-array>
     <string name="category">Category</string>
     <string name="food_list">Food List</string>
+    <string name="edit_food">Edit Food Details</string>
 </resources>

@@ -14,15 +14,15 @@
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"/>
+            android:layout_weight="2" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/edit_text_style">
+            android:background="@drawable/edit_text_style"
+            android:orientation="vertical">
 
 
             <TextView
@@ -32,8 +32,8 @@
                 android:layout_marginLeft="10dp"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/category"

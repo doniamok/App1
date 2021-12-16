@@ -151,7 +151,7 @@
 
 
         <TextView
-            android:id="@+id/data"
+            android:id="@+id/date2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/date"
@@ -161,12 +161,12 @@
             android:layout_marginLeft="45dp"/>
 
         <EditText
-            android:id="@+id/edit_data"
+            android:id="@+id/edit_date2"
             android:layout_width="155dp"
             android:layout_height="35dp"
             android:layout_marginLeft="92dp"
             android:background="@drawable/edit_text_style"
-            android:inputType="date" />
+             />
     </LinearLayout>
 
     <LinearLayout
@@ -192,7 +192,7 @@
             android:layout_height="35dp"
             android:layout_marginLeft="90dp"
             android:background="@drawable/edit_text_style"
-            android:inputType="time" />
+             />
     </LinearLayout>
 
     <Button
