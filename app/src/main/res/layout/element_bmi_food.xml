@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -14,12 +15,12 @@
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="100dp"
+            android:layout_width="15dp"
             android:layout_height="match_parent"
             android:layout_weight="2" />
 
         <LinearLayout
-            android:layout_width="300dp"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_style"
             android:orientation="vertical">
@@ -55,7 +56,37 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:background="@color/blue_max"
+                android:text="Edit"
+                android:textColor="@color/white">
+
+            </Button>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right"
+                android:background="@color/blue_max"
+                android:text="x"
+                android:textColor="@color/white">
+
+            </Button>
+
+        </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>
+

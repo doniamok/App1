@@ -3,6 +3,7 @@ package com.doniamokalbaraqouni.app1;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +12,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.doniamokalbaraqouni.app1.OOP.FireBaseConnection;
+import com.doniamokalbaraqouni.app1.OOP.User;
+
 public class login extends AppCompatActivity {
-    EditText edUsername ;
-    EditText edPassword ;
-    Button login ;
-    TextView sign_in ;
+    EditText edUsername;
+    EditText edPassword;
+    Button login;
+    TextView sign_in;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,7 @@ public class login extends AppCompatActivity {
         sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sign_in() ;
+                sign_in();
             }
         });
     }
@@ -48,20 +52,21 @@ public class login extends AppCompatActivity {
     }
 
     public void moveLogin() {
-        String uname  = edUsername.getText().toString();
+
+        String uname = edUsername.getText().toString();
         String pass = edPassword.getText().toString();
-        if(uname.equals("Mohamed") && pass.equals("12345"))
-        {
+        if (uname.equals("Mohamed") && pass.equals("12345")) {
             Intent o = new Intent(login.this, home.class);
-            o.putExtra("username",edUsername.getText().toString());
+            o.putExtra("username", edUsername.getText().toString());
             startActivity(o);
-        }
-        else
-        {
+        } else {
             Toast.makeText(login.this, "Invalid Usename password pair.", Toast.LENGTH_LONG).show();
         }
     }
-
-
-
 }
+
+
+
+
+
+

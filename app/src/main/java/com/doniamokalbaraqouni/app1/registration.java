@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.doniamokalbaraqouni.app1.OOP.FireBaseConnection;
+import com.doniamokalbaraqouni.app1.OOP.User;
+import com.doniamokalbaraqouni.app1.OOP.UserInfException;
+
 public class registration extends AppCompatActivity {
     EditText name;
     EditText e_mail ;
@@ -35,7 +39,11 @@ public class registration extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                create();
+                try {
+                    create();
+                } catch (UserInfException e) {
+                    e.printStackTrace();
+                }
             }
         });
         log_in.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +54,9 @@ public class registration extends AppCompatActivity {
         });
     }
 
-    public void create() {
+    public void create() throws UserInfException {
+        User.user = new User(name,e_mail,password,re_password,registration.this) ;
+        FireBaseConnection.registration(User.user,registration.this);
         Intent z = new Intent(registration.this, complete_information.class);
         finish();
         startActivity(z);

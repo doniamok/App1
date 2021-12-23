@@ -1,10 +1,11 @@
 package com.doniamokalbaraqouni.app1.OOP;
 
 public class BMIFood {
-    int img ;
-    String name ;
-    String category ;
-    int calory;
+   private  int img ;
+   private  String name ;
+    private  String category ;
+    private  int calory;
+    private String id ;
 
     public BMIFood(int img,String name,String category,int calory){
     this.img=img ;
@@ -13,7 +14,7 @@ public class BMIFood {
     this.calory=calory ;
     }
 
-    public int getImg(){
+    public  int getImg(){
         return  img ;
     }
     public void setImg(int img){
@@ -25,16 +26,23 @@ public class BMIFood {
     public void setName(String name){
     this.name=name ;
     }
-    public String getCategory(){
+    public  String getCategory(){
     return category ;
     }
     public void setCategory(String category){
     this.category=category ;
     }
-    public int getCalory(){
+    public  int getCalory(){
     return calory ;
     }
     public void setCalory(int calory){
     this.calory=calory ;
+    }
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
     }

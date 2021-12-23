@@ -27,7 +27,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
+    <EditText
         android:id="@+id/edit_current"
         android:layout_width="361dp"
         android:layout_height="40dp"
@@ -81,7 +81,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/save_btn1"
+            android:id="@+id/add_record_btn"
             android:layout_width="158dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -100,7 +100,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/view_home"
+        android:id="@+id/view_home_btn"
         android:layout_width="351dp"
         android:layout_height="37dp"
         android:layout_gravity="center"

@@ -19,7 +19,7 @@ public class BMIRecordAdapter extends RecyclerView.Adapter<BMIRecordHolder> {
 
 
     public BMIRecordAdapter(ArrayList<BMIRecord> records,Context context){
-        this.records = records ;
+        this.records=records ;
         this.context=context;
     }
 

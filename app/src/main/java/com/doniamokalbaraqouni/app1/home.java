@@ -23,61 +23,97 @@ import com.doniamokalbaraqouni.app1.OOP.User;
 import java.util.ArrayList;
 
 public class home extends AppCompatActivity {
-    TextView tv ;
+    static home instance ;
+    TextView hi_name,logout ;
+    EditText status ;
     RecyclerView rv ;
     ArrayList<BMIRecord> records;
-    BMIRecordAdapter adapter;
+     public static BMIRecordAdapter adapter;
     Button add_food_btn ;
-    Button save_btn1;
-    Button view_home;
+    Button add_record_btn;
+    Button view_home_btn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance=this ;
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.toolbar_title_style) ;
-        ActionBar actionBar=getSupportActionBar() ;
-        actionBar.setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_home);
-
-        tv = findViewById(R.id.personal_inf);
-        tv.setText("Hi ," + getIntent().getExtras().getString("username"));
-
+        hi_name=findViewById(R.id.personal_inf) ;
+        status=findViewById(R.id.edit_current) ;
         add_food_btn = findViewById(R.id.add_food_btn);
-        save_btn1 = findViewById(R.id.save_btn1);
-        view_home = findViewById(R.id.view_home);
+        add_record_btn = findViewById(R.id.add_record_btn);
+        view_home_btn = findViewById(R.id.view_home_btn);
+        logout=findViewById(R.id.logout) ;
+
+
+        hi_name.setText("Hi ," + getIntent().getExtras().getString("username"));
         
         add_food_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                add();
+                addFood();
             }
         });
-        save_btn1.setOnClickListener(new View.OnClickListener() {
+        add_record_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            save_btn1();
+            addRecord();
             }
             }) ;
+        view_home_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewHome() ;
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout() ;
+            }
+        });
 
         rv=findViewById(R.id.rv_home) ;
         rv.setLayoutManager(new LinearLayoutManager(this));
         records = new User().getRecords();
         adapter=new BMIRecordAdapter(records,this) ;
         rv.setAdapter(adapter);
-
-
+        adapter.notifyDataSetChanged();
+        checkBMIChange() ;
 
     }
 
-    public void save_btn1() {
-        Intent a = new Intent(home.this, add_record.class);
+    public void addFood() {
+        Intent a = new Intent(home.this, add_food_details.class);
         startActivity(a);
     }
 
-    public void add() {
-        Intent t = new Intent(home.this, add_food_details.class);
+    public void addRecord() {
+        Intent t = new Intent(home.this, add_record.class);
         startActivity(t);
+    }
+
+    public void viewHome(){
+        Intent w = new Intent(home.this,food_list.class) ;
+        startActivity(w);
+    }
+
+    public void logout(){
+      Intent d=new Intent(home.this,login.class)  ;
+    }
+
+    public static void checkBMIChange(){
+        if(instance==null)return;
+        instance.adapter.notifyDataSetChanged();
+        instance.status.setText(User.user.getHomeMessage()) ;
+        instance.hi_name.setText("Hi,"+User.user.getName()) ;
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        checkBMIChange();
     }
 }

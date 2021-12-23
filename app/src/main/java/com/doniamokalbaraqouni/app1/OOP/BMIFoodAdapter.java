@@ -13,7 +13,7 @@ import com.doniamokalbaraqouni.app1.R;
 import java.util.ArrayList;
 
  public class BMIFoodAdapter extends RecyclerView.Adapter<BMIFoodHolder> {
-    private ArrayList<BMIFood> foods ;
+     ArrayList<BMIFood> foods ;
     private Context context ;
 
     public BMIFoodAdapter(ArrayList<BMIFood>Foods,Context context){
@@ -32,7 +32,10 @@ import java.util.ArrayList;
      @Override
      public  void onBindViewHolder(@NonNull BMIFoodHolder holder, int position) {
          BMIFood food = foods.get(position);
-         holder.setBMIFood(food);
+         holder.img.setImageResource(food.getImg());
+         holder.name.setText(food.getName());
+         holder.category.setText(food.getCategory());
+         holder.calory.setText(food.getCalory());
      }
 
      @Override
